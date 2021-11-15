@@ -2,7 +2,7 @@
 {
 	using System;
 
-	internal static class ExceptionExtensions
+	public static class ExceptionExtensions
 	{
 		public static void Throw(this Exception exception)
 		{

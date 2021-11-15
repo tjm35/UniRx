@@ -40,12 +40,12 @@ namespace UniRx.InternalUtil
             }
         }
 
-        internal IObserver<T> Add(IObserver<T> observer)
+        public IObserver<T> Add(IObserver<T> observer)
         {
             return new ListObserver<T>(_observers.Add(observer));
         }
 
-        internal IObserver<T> Remove(IObserver<T> observer)
+        public IObserver<T> Remove(IObserver<T> observer)
         {
             var i = Array.IndexOf(_observers.Data, observer);
             if (i < 0)
